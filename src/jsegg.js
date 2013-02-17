@@ -1,3 +1,9 @@
+//     jsegg 0.1
+//     simple keyboard sequence mapper to set easter eggs
+//
+//     https://github.com/timotheeg/jsegg
+//     (c) 2013 Timothee Groleau
+//     jsegg may be freely distributed under the MIT license.
 
 (function($)
 {
