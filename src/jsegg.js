@@ -12,7 +12,9 @@
 		for (var idx=data.length; idx--;)
 		{
 			var cur_egg = data[idx];
-			
+
+			console.log("checking " + [key, cur_egg.seq[cur_egg.cur_idx]]);
+
 			if (key === cur_egg.seq[cur_egg.cur_idx])
 			{
 				// key match, progressing to target sequence
@@ -35,6 +37,13 @@
 
 	$.fn[NAMESPACE] = function(seq, cb)
 	{
+		// string preparation of the sequence
+		// WARNING: only alphanum supported for now!
+		if (typeof seq === "string")
+		{
+			seq = $.map(seq.toUpperCase().split(''), function(val){ return val.charCodeAt(0); });
+		}
+
 		return this.each(function()
 		{
 			var egg_data = $(this).data(NAMESPACE);

@@ -5,6 +5,10 @@
 	<script>
 		$(function()
 		{
+			// peparing a dummy string to test sequence preparation
+			$.jsegg.sequences["DUMMY"] = "DUMMY";
+			$.jsegg.sequences["webdev20"] = "webdev20";
+
 			for (var seq_name in $.jsegg.sequences)
 			{
 				var handler = function(evt, seq)
@@ -19,7 +23,7 @@
 	</script>
 </head>
 <body>
-	<p>Type the konami code and sfii code (if you know it)!</p>
+	<p>Type the konami code, sfii code (if you know it), or the string "DUMMY"!</p>
 	<div id="feedback"></div>
 </body>
 </html>
