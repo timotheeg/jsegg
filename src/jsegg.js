@@ -19,7 +19,7 @@
 		{
 			var cur_egg = data[idx];
 
-			console.log("checking " + [key, cur_egg.seq[cur_egg.cur_idx]]);
+			// console.log("checking " + [key, cur_egg.seq[cur_egg.cur_idx]]);
 
 			if (key === cur_egg.seq[cur_egg.cur_idx])
 			{
@@ -36,7 +36,9 @@
 			}
 			else if (cur_egg.cur_idx)
 			{
-				cur_egg.cur_idx = 0;
+				// the check on cur_egg.seq[0] below is to check if the missed key match from above
+				// is in fact a valid start of a new sequence
+				cur_egg.cur_idx = (key === cur_egg.seq[0] ? 1 : 0);
 			}
 		}
 	};
