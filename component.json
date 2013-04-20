@@ -1,0 +1,10 @@
+{
+  "name": "jsegg",
+  "version": "0.0.2",
+  "main": "src/jsegg.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

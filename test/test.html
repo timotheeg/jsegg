@@ -1,23 +1,28 @@
 <html>
 <head>
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="jsegg.js" language="JavaScript"></script>
+	<script src="../src/jsegg.js" language="JavaScript"></script>
 	<script>
 		$(function()
 		{
 			// peparing a dummy string to test sequence preparation
-			$.jsegg.sequences["DUMMY"] = "DUMMY";
-			$.jsegg.sequences["webdev20"] = "webdev20";
+			$.jsegg.DUMMY = "DUMMY";
+			$.jsegg.webdev20 = "webdev20";
+			$.jsegg.single_char = 'a';
+			$.jsegg.double_char_1 = 'ab';
+			$.jsegg.double_char_2 = 'aa';
 
-			for (var seq_name in $.jsegg.sequences)
+			var $feedback = $('#feedback');
+
+			for (var seq_name in $.jsegg)
 			{
 				var handler = function(evt, seq)
 				{
-					$('#feedback').append('<div>' +  arguments.callee.seq_name + '</div>');
+					$feedback.append('<div>' +  arguments.callee.seq_name + '</div>');
 				}
 				handler.seq_name = seq_name;
 
-				$(document).jsegg($.jsegg.sequences[seq_name], handler);
+				$(document).jsegg($.jsegg[seq_name], handler);
 			}
 		});
 	</script>

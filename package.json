@@ -1,7 +1,7 @@
 {
   "name": "jsegg",
-  "version": "0.0.1",
-  "description": "Keyboard easter egg manager",
+  "version": "0.0.2",
+  "description": "simple keyboard sequencer to set easter eggs",
   "homepage": "https://github.com/timotheeg/jsegg",
   "keywords": [
     "easter egg"
@@ -14,7 +14,7 @@
       "deps": ["jquery"],
       "exports": "jQuery"
     },
-    "includes": ["jsegg.js"]
+    "includes": ["src/jsegg.js"]
   },
   "maintainers": [
     {
@@ -32,7 +32,7 @@
   ],
   "repositories": [
     {
-      "type": "git", 
+      "type": "git",
       "url": "https://github.com/timotheeg/jsegg"
     }
   ],
